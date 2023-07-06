@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-const { mongo } = require('./');
+const { db } = require('./');
 
 let connection;
 (async () => {
   try {
-    connection = await mongoose.connect(mongo.mongo_local, {
+    connection = await mongoose.connect(db.mongo_local, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
@@ -13,3 +13,5 @@ let connection;
     console.log(error);
   }
 })();
+
+module.exports = { connection };

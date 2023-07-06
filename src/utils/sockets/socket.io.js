@@ -1,4 +1,4 @@
-const socketIO = require('socket.io');
+/*const socketIO = require('socket.io');
 
 class Socket {
   static insstancia = undefined;
@@ -15,3 +15,7 @@ class Socket {
     }
   }
 }
+
+module.exports = new Socket;
+
+*/

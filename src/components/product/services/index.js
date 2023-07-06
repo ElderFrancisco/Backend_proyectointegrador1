@@ -1,4 +1,4 @@
-const productModel = require('../models/mongo/productCollection');
+const productModel = require('../../../models/mongo/productCollection');
 
 class Product {
   async getProduct(id) {
@@ -37,3 +37,5 @@ class Product {
     }
   }
 }
+
+module.exports = new Product();

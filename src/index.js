@@ -11,7 +11,7 @@ class Server {
     this.PORT = port;
     this.app = express();
     this.server = http.createServer(this.app);
-    this.socket = new Socket(this.server);
+    //this.socket = new Socket(this.server);
     this.settings();
     this.views();
     this.middlewares();
@@ -40,7 +40,7 @@ class Server {
   }
   listen() {
     this.app.listen(this.port, () => {
-      console.log(`Server running on port ${this.port}`);
+      console.log(`http://localhost:${this.port}`);
     });
   }
 }
