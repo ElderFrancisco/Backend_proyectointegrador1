@@ -3,6 +3,7 @@ const productModel = require('../../../models/mongo/productCollection');
 class Product {
   async getProduct(id) {
     try {
+      console.log('getproduct hasta aca bien');
       let response = id
         ? await productModel.findById(id)
         : await productModel.find({});

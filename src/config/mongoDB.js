@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
-const { db } = require('./');
+const { mongo } = require('./');
 
 let connection;
 (async () => {
   try {
-    connection = await mongoose.connect(db.mongo_local, {
+    connection = await mongoose.connect(mongo.mongo_local, {
       useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useUnifedTopology: true,
     });
-    console.log('MongoDB connected');
+    console.log('Conexión exitosa!');
   } catch (error) {
-    console.log(error);
+    console.log('No se pudo conectar a la base de datos!');
   }
 })();
 

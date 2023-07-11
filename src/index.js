@@ -32,10 +32,10 @@ class Server {
     this.app.use(cors('*'));
   }
   routes() {
-    this.app.use((req, res, next) => {
-      req.socketManager = this.socket;
-      next();
-    });
+    //this.app.use((req, res, next) => {
+    //req.socketManager = this.socket;
+    //next();
+    //});
     serverRoutes(this.app);
   }
   listen() {
@@ -45,4 +45,4 @@ class Server {
   }
 }
 
-module.exports = new Server();
+module.exports = new Server(config.port);
