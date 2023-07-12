@@ -6,11 +6,11 @@ let connection;
   try {
     connection = await mongoose.connect(mongo.mongo_local, {
       useNewUrlParser: true,
-      useUnifedTopology: true,
+      useUnifiedTopology: true,
     });
     console.log('Conexión exitosa!');
   } catch (error) {
-    console.log('No se pudo conectar a la base de datos!');
+    console.log('No se pudo conectar a la base de datos!' + error);
   }
 })();
 

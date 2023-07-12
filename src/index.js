@@ -5,6 +5,7 @@ const path = require('path');
 const http = require('http');
 const { config } = require('./config');
 const Socket = require('./utils/sockets/socket.io');
+const { connection } = require('./config/mongoDB');
 
 class Server {
   constructor(port) {
